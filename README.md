@@ -11,5 +11,4 @@ Responsive Design: Works well on both desktop and mobile devices.
 Calculation History: Keeps a record of all your calculations.
 <br>
 Stylish UI: Modern and sleek design using blackish and greyish colors with hover effects.
-<br>
-Link of Stylish Calculator : http://127.0.0.1:5500/index.html
+
