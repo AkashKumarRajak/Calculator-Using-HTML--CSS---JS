@@ -1,0 +1,180 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2c2c2c;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    background: #1e1e1e;
+    position: relative;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #444;
+    border-radius: 5px;
+}
+
+.display {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em;
+    border-bottom: 1px solid #444;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+}
+
+.btn {
+    background: #2e2e2e;
+    border: 1px solid #444;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+    outline: none;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background: #3c3c3c;
+}
+
+.btn:active {
+    background: #4a4a4a;
+}
+
+.btn[data-action="clear"] {
+    background: #ff6666;
+    color: #fff;
+}
+
+.btn[data-action="equals"] {
+    background: #66cc66;
+    color: #fff;
+}
+
+.btn[data-action="add"],
+.btn[data-action="subtract"],
+.btn[data-action="multiply"],
+.btn[data-action="divide"] {
+    background: #3e3e3e;
+}
+
+.btn[data-action="add"]:hover,
+.btn[data-action="subtract"]:hover,
+.btn[data-action="multiply"]:hover,
+.btn[data-action="divide"]:hover {
+    background: #4a4a4a;
+}
+
+.output {
+    font-size: 2em;
+}
+
+.history {
+    background: #1e1e1e;
+    color: #aaa;
+    padding: 10px;
+    border-top: 1px solid #444;
+}
+
+.history h2 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.history ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #333;
+}
+
+@media (max-width: 600px) {
+    .display {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .display {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1e1e1e;
+    color: #aaa;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
